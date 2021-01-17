@@ -56,5 +56,10 @@ Route::options('/example', function() {
     return 'Metoda OPTIONS';
 });
 
+Route::match(['get', 'post'], '/match', function(){
+    return 'Metoda GET i POST jednocześnie';
+});
 
-
+Route::any('/all', function(){
+    return 'Wszystkie metody';
+});
