@@ -63,3 +63,6 @@ Route::match(['get', 'post'], '/match', function(){
 Route::any('/all', function(){
     return 'Wszystkie metody';
 });
+
+
+Route::view('view/route', 'route.view');
