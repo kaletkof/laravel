@@ -6,8 +6,8 @@ namespace App\Http\Controllers;
 
 class HelloController extends Controller
 {
-    public function hello()
+    public function hello(string $name)
     {
-        return view('hello.index');
+        return view('hello.hello', ['requestName' => $name]);
     }
 }
