@@ -13,12 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/blog/{post?}/{autor?}', function($post = NULL, $autor = NULL) {
-   if(!$post && !$autor) {
-      return 'Brak postów';
-   }
-   elseif(!$autor) {
-      return 'Nazwa postu: ' . $post . ' Autor anonimowy';
-   }
-   return 'Nazwa postu: ' . $post . ' Autor: ' . $autor;
+Route::get('/', function () {
+    return view('welcome');
 });
+
+Route::get('/hello', 'HelloController@hello');
