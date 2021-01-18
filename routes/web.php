@@ -66,3 +66,17 @@ Route::any('/all', function(){
 
 
 Route::view('view/route', 'route.view');
+
+/*
+/ Route - obsługa parametrów
+*/
+
+Route::get('posts/{postId}/{title}', function($postId, $title) {
+    var_dump($postId);
+    var_dump($title);
+});
+
+// Route::get('users/{nick?}', function(string $nick = null) {
+Route::get('users/{nick?}', function(string $nick = null) {
+    dd($nick);
+});
