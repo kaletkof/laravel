@@ -80,3 +80,18 @@ Route::get('posts/{postId}/{title}', function($postId, $title) {
 Route::get('users/{nick?}', function(string $nick = null) {
     dd($nick);
 });
+
+/*
+/ Name route - nazwywanie tras
+*/
+
+Route::get('items', function() {
+    return 'Items';
+})
+->name('shop.items');
+
+Route::get('example', function() {
+    $url = route('shop.items');
+
+    dump($url);
+});
