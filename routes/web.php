@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('users', 'UserController@list')
+    ->name('get.users');
+
+Route::get('users/{id}', 'User\ProfilController@show')
+    ->name('get.user.profile');
