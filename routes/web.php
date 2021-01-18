@@ -22,3 +22,6 @@ Route::get('users', 'UserController@list')
 
 Route::get('users/{id}', 'User\ProfilController@show')
     ->name('get.user.profile');
+
+Route::get('users/{id}/address', 'User\ShowAddress')
+    ->name('get.users.address');
