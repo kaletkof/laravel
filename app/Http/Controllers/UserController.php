@@ -61,6 +61,15 @@ class UserController extends Controller
         // redirect to other site
         //return redirect()->away('https://github.com/');
         
+        // when we need set status, header...
+        // return response()
+        //     ->view('user.profile', ['id' => $id], 200)
+        //     ->header('Content-Type', 'text/html');
+    
+        // return view('user.profile', ['id' => $id]);    
+
+        // set as default : Content-Type : application/json
+        // return response()->json(['id' => $id]);
     }
 
     public function testStore(Request $request, int $id)
