@@ -50,10 +50,15 @@ class UserController extends Controller
         // redirect
         // return redirect('users');
 
-        // redirect by route name
+        // redirect by route name - most useful e.g. when redirect url to another url
         // return redirect()->route('get.users');
         // return redirect()->route('get.users.address', ['id' => $id]);
 
+        //redirect to controller
+        // return redirect()->action('UserController@list');
+        // return redirect()->action('User\ShowAddress', ['id' => $id]);
+
+        
         
     }
 
