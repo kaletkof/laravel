@@ -47,8 +47,11 @@ class UserController extends Controller
         //     );        //czas w minutach
 
 
-        
-        
+        // redirect
+        // return redirect('users');
+
+
+
     }
 
     public function testStore(Request $request, int $id)
