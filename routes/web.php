@@ -20,6 +20,12 @@ Route::get('/', function () {
 Route::get('users', 'UserController@list')
     ->name('get.users');
 
+Route::get('users/test/{id}', 'UserController@testShow')
+    ->name('get.users.test');
+
+Route::post('users/test/{id}', 'UserController@testStore')
+    ->name('post.users.test');
+
 Route::get('users/{id}', 'User\ProfilController@show')
     ->name('get.user.profile');
 
