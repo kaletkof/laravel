@@ -54,11 +54,12 @@ class UserController extends Controller
         // return redirect()->route('get.users');
         // return redirect()->route('get.users.address', ['id' => $id]);
 
-        //redirect to controller
+        //  redirect to controller
         // return redirect()->action('UserController@list');
         // return redirect()->action('User\ShowAddress', ['id' => $id]);
 
-        
+        // redirect to other site
+        //return redirect()->away('https://github.com/');
         
     }
 
