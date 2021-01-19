@@ -25,3 +25,13 @@ Route::get('users/{id}', 'User\ProfilController@show')
 
 Route::get('users/{id}/address', 'User\ShowAddress')
     ->name('get.users.address');
+
+Route::resource('games', 'GameController')
+    ->only([
+        'index', 'show'
+    ]);
+
+Route::resource('admin/games', 'GameController')
+    ->only([
+        'store', 'create', 'destroy'
+    ]);
