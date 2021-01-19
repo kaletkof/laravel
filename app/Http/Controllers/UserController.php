@@ -15,67 +15,44 @@ class UserController extends Controller
 
     public function testShow(Request $request, int $id)
     {
-        $uri = $request->path();
-        $url = $request->url();
-        $fullUrl = $request->fullUrl();
+        //text
+        //return "To jest zwykły tekst konwertowany przez framework na HTTP Response. User: $id";
 
-        // dump($uri, $url, $fullUrl);
+        //response object
+        // return response(
+        //     "<h3>To jest obiekt response: User: $id</h3>", //content
+        //     200,                                           //http status
+        //     ['Content-Type' => 'text/html']                //array with headers
+        // );
 
-        $httpMethod = $request->method();
+        //chain
+        // return response("<h3>Chain to jest obiekt response: User: $id</h3>")
+        //     ->setStatusCode(200)
+        //     ->header('Content-Type', 'text/html')
+        //     ->header('Own-Header', 'Laravel');
 
-        if ($request->isMethod('post')) {
-            dump('to jest POST');
-        }
+        //with cookie
+        // return response(
+        //         "<h3>Cookie: to jest obiekt response: User: $id<h3>", 
+        //         200
+        //     )
+        //     ->header(
+        //         'Content-Type', 
+        //         'text/html'
+        //     )
+        //     ->cookie(
+        //         'my_best_cookie', 
+        //         'brownie', 
+        //         10
+        //     );        //czas w minutach
 
-        // /users/test/69?name=Kris&nick=boss
 
-        $all = $request->all();
-
-        // dd($all);
-
-        $name = $request->input('name');
-        $lastName = $request->input('lastName', 'Kowalski');
-
-        // dd($lastName);
-
-        // $game = $request->input('games');
-        // $game = $request->input('games.1');
-        $game = $request->input('games.1.name');
-
-        $allQuery = $request->query();
-        $name = $request->query('name');
-        $name = $request->input('lastName', 'Nowak');
-        // dd($name);
-        // dd($allQuery);
-
-        $expired = $request->boolean('expired');
-        $hasName = $request->has('name');
-        $hasParams = $request->has(['name', 'nick']);
-        $hasAnyParams = $request->hasAny(['name', 'nick']);
-        // dd($hasAnyParams);
-
-        $cookies = $request->cookie('my_cookie' );
-        // dd($cookies);
-
-        $input = $request->input();
-        $query = $request->query();
-
-        dd($input, $query);
-
-        dump($request);
-        dd($id);
+        
+        
     }
 
     public function testStore(Request $request, int $id)
     {
-        if (!$request->isMethod('post')) {
-            return 'to nie jest POST';
-        }
-
-        $allQuery = $request->query();
-
-        dump($allQuery);
-
-        dd('post store');
+    
     }
 }
