@@ -15,7 +15,10 @@ class UserController extends Controller
 
     public function testShow(Request $request, int $id)
     {
-        return view('user.profile', ['id' => $id]);    
+        return view('user.show', [
+            'id' => $id, 
+            'example' => '333'
+        ]);    
     }
 
     public function testStore(Request $request, int $id)
