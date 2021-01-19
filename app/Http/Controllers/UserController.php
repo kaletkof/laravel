@@ -50,8 +50,11 @@ class UserController extends Controller
         // redirect
         // return redirect('users');
 
+        // redirect by route name
+        // return redirect()->route('get.users');
+        // return redirect()->route('get.users.address', ['id' => $id]);
 
-
+        
     }
 
     public function testStore(Request $request, int $id)
