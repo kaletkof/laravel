@@ -16,6 +16,7 @@ class UserController extends Controller
     public function testShow(Request $request, int $id)
     {
         return view('user.show', [
+            'applicationName' => 'Laravel Games',
             'id' => $id, 
             'example' => '333'
         ]);    
