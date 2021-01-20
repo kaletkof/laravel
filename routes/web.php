@@ -20,8 +20,11 @@ Route::get('/', function () {
 Route::get('users', 'UserController@list')
     ->name('get.users');
 
-Route::get('users/{id}', 'User\ProfilController@show')
-    ->name('get.user.profile');
+Route::get('users/{userId}', 'UserController@show')
+    ->name('get.user.show');
+
+// Route::get('users/{id}', 'User\ProfilController@show')
+//     ->name('get.user.profile');
 
 Route::get('users/{id}/address', 'User\ShowAddress')
     ->name('get.users.address');

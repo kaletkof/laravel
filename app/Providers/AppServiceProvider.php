@@ -25,7 +25,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        // view()->share('applicationName', 'Laravel Games');
+        view()->share('applicationName', 'Świat gier');
         // View::share('applicationName', 'Laravel Games 2');
     }
 }

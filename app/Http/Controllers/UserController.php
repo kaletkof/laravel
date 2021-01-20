@@ -12,4 +12,11 @@ class UserController extends Controller
     {
         return view('user.list');
     }
+
+    public function show(int $userId)
+    {
+        return view('user.show', [
+            'userId' => $userId
+        ]);
+    }
 }

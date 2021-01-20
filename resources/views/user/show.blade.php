@@ -1,4 +1,15 @@
-<h1>Application name: {{ $applicationName }}</h1>
-<div>
-    Example: {{ $example }}
-</div>
+@extends('layout.main')
+
+@section('title', 'Użytkownik')
+
+@section('sidebar')
+    @parent
+    Sidebar z dziecka
+@endsection
+
+@section('content')
+    <h1>Application: {{ $applicationName }}</h1>
+    <div>
+        User: {{ $userId }}
+    </div>
+@endsection
