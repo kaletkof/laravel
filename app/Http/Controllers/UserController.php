@@ -12,18 +12,4 @@ class UserController extends Controller
     {
         return view('user.list');
     }
-
-    public function testShow(Request $request, int $id)
-    {
-        return view('user.show', [
-            'applicationName' => 'Laravel Games',
-            'id' => $id, 
-            'example' => '333'
-        ]);    
-    }
-
-    public function testStore(Request $request, int $id)
-    {
-    
-    }
 }

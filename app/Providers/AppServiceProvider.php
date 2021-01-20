@@ -2,9 +2,9 @@
 
 namespace App\Providers;
 
-// use Facade\FlareClient\View;
+use Facade\FlareClient\View;
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\View;
+// use Illuminate\Support\Facades\View;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -25,7 +25,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        view()->share('applicationName', 'Laravel Games');
-        View::share('applicationName', 'Laravel Games 2');
+        // view()->share('applicationName', 'Laravel Games');
+        // View::share('applicationName', 'Laravel Games 2');
     }
 }
