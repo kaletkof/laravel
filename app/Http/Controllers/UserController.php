@@ -22,13 +22,19 @@ class UserController extends Controller
             ];
         }
 
+        $session = $request->session();
+        $session->put('prevAction', __METHOD__ . ':' . time());
+
         return view('user.list', [
             'users' => $users
         ]);
     }
 
-    public function show(int $userId)
+    public function show(Request $request, int $userId)
     {
+        $prevAction = $request->session()->get('prevAction');
+        dd($prevAction);
+        
         $faker = Factory::create();
         $user = [
             'id' => $userId,
